@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> SOFTWARE DESIGN PROJECT </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="DAE1_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <h3> OMNIBUS DATA ANALYSIS ENGINE </h3>
+    </div>
+    <ul>
+        <li> <a href="#Home">Home Page</a></li>
+        <li><a href="#Upload"> Upload CSV</a></li>
+        <li class="dropdown">
+            <a href="#dropdown" class="dropbtn"> Data Analysis</a>
+            <div class="dropdown-content">
+                <a href="#link1" onclick="LinkFunction()"> Dataset Information </a>
+            </div>
+        </li>
+        <li> <a href="#Logout">Log Out</a></li>
+    </ul>
+    <div class="section">
+        <div class=" content ">
+            <h4> Dataset Information </h4>
+            <p>
+                Select an uploaded CSV dataset to see the information about the variables within the dataset and the
+                relationships between the variables
+            </p>
+            <div class="container">
+                <div class="dropdownbutton ">
+                    <button onclick="myFunction()" class="dropbutton">
+                        Select CSV Dataset
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div id="myDropdown" class="dropdowncontent">
+                        <a href="#auto">Automotive</a>
+                    </div>
+                </div>
+                <button onclick="show()" class="button">SHOW</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // When the user clicks on the button, toggle between hiding and showing the dropdown content 
+        
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function LinkFunction() {
+            document.getElementsByClassName('section')[0].style.display = 'block';
+            // section.style.disply = "block";
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbutton')) {
+
+                var dropdowns = document.getElementsByClassName("dropdowncontent");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        // To change the title of the dropdown button 
+        $(".dropdowncontent a").on("click", function () {
+            $('.dropbutton').text($(this).text());
+        });
+
+        //To navigate to google
+
+        function show () {
+            window.open("newPage.html")
+        }
+
+    </script>
+
+</body>
+
+
+</html>

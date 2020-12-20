@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> SOFTWARE DESIGN PROJECT </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="newPage_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css" charset="utf-8">
+    <script src="http://cdn.webix.com/edge/webix.js" type="text/javascript" charset="utf-8"></script>
+    <script src="plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h3> OMNIBUS DATA ANALYSIS ENGINE </h3>
+    </div>
+    <ul>
+        <li> <a href="#Home">Home Page</a></li>
+        <li><a href="#Upload"> Upload CSV</a></li>
+        <li class="dropdown">
+            <a href="#dropdown" class="dropbtn"> Data Analysis</a>
+            <div class="dropdown-content">
+                <a href="#link1"> Dataset Information </a>
+                <a href="#link2">Relationship</a>
+            </div>
+        </li>
+        <li> <a href="#Logout">Log Out</a></li>
+    </ul>
+    <div class="charts_container"></div>
+        <div class = "container_child" id = "layout1" style="overflow:auto; height:556px;width:564px;"></div>
+        <div class = "container_child" id = "layout2" style="overflow:auto; height:556px;width:564px;"><</div>
+    <p id = "exp"></p>
+    <script type="text/javascript" src="newPage_display.js"></script>
+
+</body>
+
+
+</html>
